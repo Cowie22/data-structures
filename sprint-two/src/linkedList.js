@@ -23,14 +23,14 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-    
-    /*for (let key in list) {
-      if (list[key] === Node(target)) {
+    let node = list.head; 
+    while(node) {
+      if (node.value === target) {
         return true; 
-      } else if (typeof list[key] === 'object') {
-        contains(list[key]); 
       }
-    }*/
+      node = node.next; 
+    }
+    return false; 
   };
 
   return list;

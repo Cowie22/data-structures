@@ -52,4 +52,13 @@ describe('linkedList', function() {
   });
 
   // add more tests here to test the functionality of linkedList
+  it('should have the same length as the amount of nodes that are added', function() {
+    var result = [];
+    var add1 = linkedList.addToTail(1);
+    var add2 = linkedList.addToTail(2);
+    var add3 = linkedList.addToTail(3);
+    var add4 = linkedList.addToTail(4);
+    result.push(add1, add2, add3, add4);
+    expect(result).to.have.lengthOf(4);
+  });
 });

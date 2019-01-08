@@ -73,4 +73,23 @@ describe('hashTable', function() {
     hashTable.remove('Mr.');
     expect(hashTable._limit).to.equal(8);
   });
+  
+  it('should never change the limit given by the user when adding or removing values', function() {
+    hashTable.insert('Steven', 'Spielberg');
+    hashTable.remove('Steven');
+    hashTable.insert('Bob', 'Marley');
+    hashTable.insert('Fifty', 'Cent');
+    hashTable.insert('Elvis', 'Pressly');
+    hashTable.insert('Kendrick', 'Lamar');
+    hashTable.insert('Lebron', 'James');
+    hashTable.remove('Lebron');
+    hashTable.insert('John', 'Lennon');
+    hashTable.insert('Freddie', 'Mercury');
+    hashTable.insert('Axel', 'Rose');
+    hashTable.remove('Axel'); 
+    hashTable.insert('Mac', 'Miller');
+    hashTable.insert('Robert', 'Plant');
+    expect(hashTable._limit).to.equal(8);
+  });
+  
 });

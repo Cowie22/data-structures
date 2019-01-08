@@ -15,14 +15,24 @@ treeMethods.addChild = function(value) {
   this.children.push(newNode); 
 };
 
-treeMethods.contains = function(target, parent) {
-  parent = parent || this;
-  if (parent.value === target) {
+treeMethods.contains = function(target) {
+  // parent = parent || this;
+  // if (parent.value === target) {
+  //   return true; 
+  // }
+  // for (let i = 0; i < parent.children.length; i++) {
+  //   var child = this.children[i]; 
+  //   if (child.contains(target, parent.children[i])) {
+  //     return true;
+  //   } 
+  // }
+  //   return false;
+  if (this.value === target) {
     return true; 
   }
-  for (let i = 0; i < parent.children.length; i++) {
+  for (let i = 0; i < this.children.length; i++) {
     var child = this.children[i]; 
-    if (child.contains(target, parent.children[i])) {
+    if (child.contains(target)) {
       return true;
     } 
   }

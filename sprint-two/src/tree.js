@@ -2,8 +2,8 @@ var Tree = function(value) {
   var newTree = {};
   newTree.value = value;
 
-  _.extend(newTree, treeMethods)
-  newTree.children = [];  // fix me
+  _.extend(newTree, treeMethods);
+  newTree.children = [];// fix me
 
   return newTree;
 };
@@ -36,12 +36,12 @@ treeMethods.contains = function(target) {
       return true;
     } 
   }
-    return false;
+  return false;
   //check if parent.value === target
-    //if not check if parent has children 
+  //if not check if parent has children 
   //check each child for value 
-    //check if each child has children 
-      //check each for value 
+  //check if each child has children 
+  //check each for value 
   
   
 };

@@ -64,7 +64,13 @@ Graph.prototype.forEachNode = function(cb) {
 };
 
 /*
- * Complexity: What is the time complexity of the above functions?
+ .addNode: O(1) - one step every time you need to add a node
+ .contains: O(1) - we made an object, and objects have constant time lookup
+ .removeNode: O(n^2) - in order to splice an item you have to find it using the index and then after it is removed, the remaining items need to shift over
+ .hasEdge: O(n) - finding a node at an index takes searching through the entire array
+ .addEdge: O(1) - there are always two operations to perform
+ .removeEdge: O(n^2) - have to find the index of the node and then splice it out, so that everything has to move over
+ .forEachNode: O(n) - have to iterate the array of keys and perform the callback on each item.  The longer the array, the more time this will take  
  */
 
 

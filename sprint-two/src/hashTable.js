@@ -9,7 +9,7 @@ var HashTable = function() {
 HashTable.prototype.insert = function(k, v) {
   var index = getIndexBelowMaxForKey(k, this._limit);
   let bucket = this._storage.get(index) || [];
-  let tuple = [k,v];
+  let tuple = [k, v];
   for (let i = 0; i < bucket.length; i++) {
     let bucketTuple = bucket[i];
     if (bucketTuple[0] === k) {
@@ -43,7 +43,10 @@ HashTable.prototype.remove = function(k) {
 
 
 /*
- * Complexity: What is the time complexity of the above functions?
+ .insert: 
+ .retrieve: 
+ .remove:  
+
  */
 
 

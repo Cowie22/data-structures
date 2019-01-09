@@ -65,12 +65,13 @@ binaryMethods.depthFirstLog = function(callback) {
   //we need to iterate over every node in the tree
   //basecase callback(this.value)
   //if this.right(this.right.depthFirstLog(callback))
-  //if this
 
   
 };
 
 
 /*
- * Complexity: What is the time complexity of the above functions?
+ binaryMethods.insert - O(n): the larger the tree is the more times the function will has to recurse to find it's proper position.  Of course this is divided by two
+ binaryMethods.contains - O(n): again the larger the tree the more times the function will have to recurse in order to fins the proper position.  Again divided by two
+ binaryMethods.depthFirstLog - O(n): the arger the tree, the more items the recusive function must perform upon
  */

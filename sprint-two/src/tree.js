@@ -16,17 +16,6 @@ treeMethods.addChild = function(value) {
 };
 
 treeMethods.contains = function(target) {
-  // parent = parent || this;
-  // if (parent.value === target) {
-  //   return true; 
-  // }
-  // for (let i = 0; i < parent.children.length; i++) {
-  //   var child = this.children[i]; 
-  //   if (child.contains(target, parent.children[i])) {
-  //     return true;
-  //   } 
-  // }
-  //   return false;
   if (this.value === target) {
     return true; 
   }
@@ -49,5 +38,8 @@ treeMethods.contains = function(target) {
 
 
 /*
- * Complexity: What is the time complexity of the above functions?
+ .addChild: O(1) - will always have to create a node& push to tree
+ # of operations will never change.
+ .contains: O(N) - adding more inputs linerally increases the number
+ of iterations (operations) the for loop will have to perform. 
  */

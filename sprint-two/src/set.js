@@ -28,5 +28,9 @@ setPrototype.remove = function(item) {
 };
 
 /*
- * Complexity: What is the time complexity of the above functions?
+ .add: O(N) - indexOf requires iteration of an array, as more items are added it requires more operations. 
+ .contains: O(N) - indexOf requires iteration of an array, as more items are added it requires more operations.
+ .remove: O(N^2) - indexOf requires iteration of an array, as more items are added it requires more operations. 
+ After the item is removed each item must be shifted. Thus as more items are added to the array, the amount 
+ of operations increases exponentially n*n. 
  */
